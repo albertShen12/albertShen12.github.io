@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>学习antd-theme - 千叶</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
+	<link rel="icon" href="/styles/images/favicon.jpg">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="canonical" href="/2019/02/01/antd-theme/">
+	<link rel="alternate" type="application/rss+xml" title="千叶" href="/feed.xml">
+	
+	<meta name="keywords" content="学习antd-theme, 千叶, 莲开千叶，万古传奇">
+	<meta name="description" content="莲开千叶，万古传奇">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<!--<script>-->
+		<!--var _hmt = _hmt || [];-->
+		<!--(function() {-->
+		  <!--var hm = document.createElement("script");-->
+		  <!--hm.src = "//hm.baidu.com/hm.js?";-->
+		  <!--var s = document.getElementsByTagName("script")[0]; -->
+		  <!--s.parentNode.insertBefore(hm, s);-->
+		<!--})();-->
+	<!--</script>-->
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a href="/" class="navbar-brand">-->
+        <!--<img src="/styles/images/logo.jpg">-->
+      <!--</a>-->
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/categories/">分类</a>
+        </li>
+        <li>
+          <a href="/tag">标签</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li>-->
+            <!--<a><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></a>-->
+        <!--</li>-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/albertShen12/">Github</a></li>
+            <!--<li><a rel="nofollow" target="_blank" href="https://github.com/albertShen12/">关于作者</a></li>-->
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <!--<li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>-->
+            <!--<li><a rel="nofollow" href="/reference">推荐博客</a></li>-->
+            <!--<li><a href="/feed.xml">RSS订阅</a></li>-->
+            <!--<li class="divider"></li>-->
+            <!--<li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>-->
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+      <h1>千叶</h1>
+      <p>千叶的个人主页</p>
+  </div>
+</div>
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/categories/#css-ref">css</a>	/
+    	<a href="/tag/#antd-ref">antd</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+  </ul>
+  <!--<div style="height: 200px;width: 200px;">-->
+    <!--<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"> -->
+    <!--</script>-->
+  <!--</div>-->
+</div>
+
+ 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">学习antd-theme</h1>
+              <!--
+                <p class="post-meta">Feb 1, 2019</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">Feb 01, 2019</span> By <a target="_blank" href="http://localhost:4000">Albert Shen</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#zhugeliang" id="markdown-toc-zhugeliang">antd-theme</a>    <ul>
+      <li><a href="#antd的样式采用less语言并向开发者提供了两个功能" id="markdown-toc-antd的样式采用less语言并向开发者提供了两个功能">antd的样式采用less语言，并向开发者提供了两个功能：</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="zhugeliang">antd-theme</h2>
+
+<h4 id="antd的样式采用less语言并向开发者提供了两个功能">antd的样式采用less语言，并向开发者提供了两个功能：</h4>
+<ol>
+  <li>按需加载组件样式</li>
+  <li>自定义主题</li>
+</ol>
+
+<p>按需加载组件样式，通过webpack中配置对应的插件即可。而自定义主题的应用，则需要了解更多的细节。</p>
+
+<p>首先，要知道antd中一共有多少可定义的参数。<br />
+引用自官网：<a href="https://ant.design/docs/react/customize-theme-cn">antd定制主题</a><br />
+@primary-color: #1890ff;                         // 全局主色<br />
+@link-color: #1890ff;                            // 链接色<br />
+@success-color: #52c41a;                         // 成功色<br />
+@warning-color: #faad14;                         // 警告色<br />
+@error-color: #f5222d;                           // 错误色<br />
+@font-size-base: 14px;                           // 主字号<br />
+@heading-color: rgba(0, 0, 0, .85);              // 标题色<br />
+@text-color: rgba(0, 0, 0, .65);                 // 主文本色<br />
+@text-color-secondary : rgba(0, 0, 0, .45);      // 次文本色<br />
+@disabled-color : rgba(0, 0, 0, .25);            // 失效色<br />
+@border-radius-base: 4px;                        // 组件/浮层圆角<br />
+@border-color-base: #d9d9d9;                     // 边框色<br />
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影</p>
+
+<p>接着，就是如果定制。<br />
+一，通过webpack配置：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// webpack.config.js
+module.exports = {
+  rules: [{
+    test: /\.less$/,
+    use: [{
+      loader: 'style-loader',
+    }, {
+      loader: 'css-loader', // translates CSS into CommonJS
+    }, {
+      loader: 'less-loader', // compiles Less to CSS
++     options: {
++       modifyVars: {
++         'primary-color': '#1DA57A',
++         'link-color': '#1DA57A',
++         'border-radius-base': '2px',
++       },
++       javascriptEnabled: true,
++     },
+    }],
+    // ...other rules
+  }],
+  // ...other config
+}
+</code></pre></div></div>
+
+<p>二，通过less文件覆盖：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import "~antd/dist/antd.less";   // 引入官方提供的 less 样式入口文件
+@import "your-theme-file.less";   // 用于覆盖上面定义的变量
+</code></pre></div></div>
+
+<p>但这两种，都是在打包阶段完成的主题自定义。我们还会面对主题切换的需求。
+可以通过以下方式完成：</p>
+<ol>
+  <li>在项目中引入less.js</li>
+  <li>在html文件中放置一个color.less文件位于其他css文件下</li>
+  <li>点击主题切换时，调用 less.modifyVars()修改color.less中包含的变量。</li>
+</ol>
+
+
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2018-2019 <a href="https://github.com/albertShen12/"><code>Albert Shen</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>
