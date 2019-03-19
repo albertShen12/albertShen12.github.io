@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>webpack4学习（第一篇：基础） - 千叶</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
+	<link rel="icon" href="/styles/images/favicon.jpg">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="canonical" href="/2019/03/19/webpack4-1/">
+	<link rel="alternate" type="application/rss+xml" title="千叶" href="/feed.xml">
+	
+	<meta name="keywords" content="webpack4学习（第一篇：基础）, 千叶, 莲开千叶，万古传奇">
+	<meta name="description" content="莲开千叶，万古传奇">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<!--<script>-->
+		<!--var _hmt = _hmt || [];-->
+		<!--(function() {-->
+		  <!--var hm = document.createElement("script");-->
+		  <!--hm.src = "//hm.baidu.com/hm.js?";-->
+		  <!--var s = document.getElementsByTagName("script")[0]; -->
+		  <!--s.parentNode.insertBefore(hm, s);-->
+		<!--})();-->
+	<!--</script>-->
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a href="/" class="navbar-brand">-->
+        <!--<img src="/styles/images/logo.jpg">-->
+      <!--</a>-->
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/categories/">分类</a>
+        </li>
+        <li>
+          <a href="/tag">标签</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li>-->
+            <!--<a><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></a>-->
+        <!--</li>-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/albertShen12/">Github</a></li>
+            <!--<li><a rel="nofollow" target="_blank" href="https://github.com/albertShen12/">关于作者</a></li>-->
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <!--<li><a rel="nofollow" href="http://www.hifreud.com/domains/">域名管理</a></li>-->
+            <!--<li><a rel="nofollow" href="/reference">推荐博客</a></li>-->
+            <!--<li><a href="/feed.xml">RSS订阅</a></li>-->
+            <!--<li class="divider"></li>-->
+            <!--<li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>-->
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+      <h1>千叶</h1>
+      <p>千叶的个人主页</p>
+  </div>
+</div>
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/categories/#js-ref">js</a>	/
+    	<a href="/tag/#webpack-ref">webpack</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+  </ul>
+  <!--<div style="height: 200px;width: 200px;">-->
+    <!--<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"> -->
+    <!--</script>-->
+  <!--</div>-->
+</div>
+
+ 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">webpack4学习（第一篇：基础）</h1>
+              <!--
+                <p class="post-meta">Mar 19, 2019</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">Mar 19, 2019</span> By <a target="_blank" href="http://localhost:4000">Albert Shen</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#albert" id="markdown-toc-albert">webpack4学习</a>    <ul>
+      <li><a href="#目录" id="markdown-toc-目录">目录：</a></li>
+      <li><a href="#正文" id="markdown-toc-正文">正文：</a></li>
+      <li><a href="#动手尝试" id="markdown-toc-动手尝试">动手尝试：</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="albert">webpack4学习</h2>
+
+<p>webpack是前端构建项目最常用的工具，目前的前端项目除了angular之外，基本都是由webpack，或二次封装webpack的构建工具进行构建。</p>
+
+<h4 id="目录">目录：</h4>
+<ol>
+  <li>webpack4学习（第一篇：基础）</li>
+  <li><a href="https://albertshen12.github.io/2019/03/19/webpack4-2/">webpack4学习（第二篇：dev模式与热更新）</a></li>
+  <li><a href="https://albertshen12.github.io/2019/03/19/webpack4-3/">webpack4学习（第三篇：静态文件）</a></li>
+  <li><a href="https://albertshen12.github.io/2019/03/19/webpack4-4/">webpack4学习（第四篇：常用插件）</a></li>
+</ol>
+
+<h4 id="正文">正文：</h4>
+
+<p>webpack的基础功能，在于将项目化的前端代码，打包成可运行的文件。在这个过程中，涉及了一些功能点：</p>
+<ol>
+  <li>获取文件中依赖的其他文件打包到文件中（bundle）。</li>
+  <li>对各个类型的文件进行预处理（loader）。js文件需要将es6转化为原生js，scss/less文件需要编译成css等等</li>
+  <li>对各个类型的文件进行优化（loader）。例如去除js中冗余的代码，对css中的样式拓展浏览器支持，压缩文件大小</li>
+  <li>将项目文件进行拆分（chunk）。优化加载速度。例如分离公共库和业务代码，以及按路由懒加载。</li>
+  <li>通过某些插件简化一些其他的前端开发工作（plugin）。例如常见的webpack-html—plugin</li>
+  <li>以开发模式运行项目代码（devServer）。
+除此之外，还有一些其他的功能。例如代码分析，服务器渲染等。</li>
+</ol>
+
+<h4 id="动手尝试">动手尝试：</h4>
+
+<ol>
+  <li>准备一个空白项目(需node，npm环境)
+    <ul>
+      <li>创建目录:       mkdir webpack4-react-demo &amp; cd webpack4-react-demo</li>
+      <li>初始化package.json:    npm init</li>
+      <li>添加对应的webpack模块到项目中<br />
+  npm i –save-dev webpack@4.19.1 webpack-cli@2 webpack-dev-server@3<br />
+  npm i –save-dev babel-core@6 babel-loader@7 babel-preset-env babel-preset-react@6<br />
+  npm i –save-dev html-loader html-webpack-plugin@3<br />
+  npm i –save react@16 react-dom@16</li>
+      <li>新建index.html文件,内容:<br />
+  <code class="highlighter-rouge"><span class="cp">&lt;!DOCTYPE html&gt;</span></code><br />
+  <code class="highlighter-rouge"><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span></code><br />
+  <code class="highlighter-rouge">&lt;head&gt;</code><br />
+      <code class="highlighter-rouge">&lt;meta charset="utf-8"&gt;</code><br />
+      <code class="highlighter-rouge">&lt;title&gt;React&lt;/title&gt;</code><br />
+  <code class="highlighter-rouge">&lt;/head&gt;</code><br />
+  <code class="highlighter-rouge">&lt;body&gt;</code>
+  <code class="highlighter-rouge">&lt;div id="app"&gt;</code><br />
+  <code class="highlighter-rouge">&lt;/div&gt;</code><br />
+  <code class="highlighter-rouge">&lt;/body&gt;</code><br />
+  <code class="highlighter-rouge">&lt;/html&gt;</code></li>
+      <li>新建.babelrc文件,内容:<br />
+  <code class="highlighter-rouge">{</code><br />
+      <code class="highlighter-rouge">"presets": ["env", "react"]</code><br />
+  <code class="highlighter-rouge">}</code></li>
+      <li>
+        <p>创建src目录，并新建App.js,内容：</p>
+
+        <p><code class="highlighter-rouge">import React from "react";</code></p>
+
+        <p><code class="highlighter-rouge">const App = () =&gt; {</code><br />
+  <code class="highlighter-rouge">return (</code><br />
+      <code class="highlighter-rouge">&lt;div&gt;</code><br />
+          <code class="highlighter-rouge">&lt;p&gt;hello world!&lt;/p&gt;</code><br />
+      <code class="highlighter-rouge">&lt;/div&gt;</code><br />
+  <code class="highlighter-rouge">);</code><br />
+  <code class="highlighter-rouge">};</code><br />
+  <code class="highlighter-rouge">export default App;</code></p>
+      </li>
+      <li>
+        <p>src目录下，继续新建index.js,内容：</p>
+
+        <p><code class="highlighter-rouge">import App from "./App";</code><br />
+  <code class="highlighter-rouge">import React from "react";</code><br />
+  <code class="highlighter-rouge">import ReactDOM from "react-dom";</code><br />
+  <code class="highlighter-rouge">ReactDOM.render(&lt;App/&gt;, document.getElementById("app"));</code></p>
+      </li>
+      <li>
+        <p>创建build目录,并新建webpack.config.js文件,内容:
+  <code class="highlighter-rouge">const HtmlWebPackPlugin = require("html-webpack-plugin");</code><br />
+  <code class="highlighter-rouge">const path = require('path');</code></p>
+
+        <p><code class="highlighter-rouge">module.exports = {</code><br />
+      <code class="highlighter-rouge">entry: './src/index.js',    // 入口</code><br />
+      <code class="highlighter-rouge">context: path.resolve(__dirname,'../'),</code><br />
+      <code class="highlighter-rouge">module: {</code><br />
+          <code class="highlighter-rouge">rules: [</code><br />
+              <code class="highlighter-rouge">{</code><br />
+                  <code class="highlighter-rouge">test: /\.js$/,</code><br />
+                  <code class="highlighter-rouge">exclude: /node_modules/,</code><br />
+                  <code class="highlighter-rouge">use: {</code><br />
+                      <code class="highlighter-rouge">loader: "babel-loader"</code><br />
+                  <code class="highlighter-rouge">}</code><br />
+              <code class="highlighter-rouge">},</code><br />
+              <code class="highlighter-rouge">{</code><br />
+                  <code class="highlighter-rouge">test: /\.html$/,</code><br />
+                  <code class="highlighter-rouge">use: [</code><br />
+                      <code class="highlighter-rouge">{</code><br />
+                          <code class="highlighter-rouge">loader: "html-loader",</code><br />
+                          <code class="highlighter-rouge">options: {minimize: true}</code><br />
+                      <code class="highlighter-rouge">}</code><br />
+                  <code class="highlighter-rouge">]</code><br />
+              <code class="highlighter-rouge">}</code><br />
+          <code class="highlighter-rouge">]</code><br />
+      <code class="highlighter-rouge">},</code><br />
+      <code class="highlighter-rouge">plugins: [</code><br />
+          <code class="highlighter-rouge">new HtmlWebPackPlugin({</code><br />
+              <code class="highlighter-rouge">template: "./index.html",</code><br />
+              <code class="highlighter-rouge">filename: "./index.html"</code><br />
+          <code class="highlighter-rouge">})</code><br />
+      <code class="highlighter-rouge">]</code><br />
+  <code class="highlighter-rouge">};</code></p>
+      </li>
+      <li>package.json添加script指令:
+  <code class="highlighter-rouge">"dev": "webpack-dev-server --config build/webpack.config.js --mode development --open"</code>
+  <code class="highlighter-rouge">"build": "webpack --config build/webpack.config.js --mode production"</code></li>
+    </ul>
+  </li>
+</ol>
+
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2018-2019 <a href="https://github.com/albertShen12/"><code>Albert Shen</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>
