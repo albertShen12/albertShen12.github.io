@@ -1,0 +1,26 @@
+# Jekyll configuration
+
+name: 千叶-随笔
+description: 莲开千叶，万古传奇
+
+# url is currently only used only for the RSS feed in feed.xml
+url: https://github.com/albertShen12
+
+# baseurl will often be '', but for a project page on gh-pages, it needs to
+# be the project name.
+# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
+#     run it like so: jekyll serve --baseurl=''
+baseurl: ''
+## default date_format
+date_format:
+  title: "%B-%-d-%Y"
+  archive: "%b"
+  categories: "%b-%Y"
+  tag: "%b-%Y"
+# Language
+lan: "cn"
+
+highlighter: rouge
+markdown: kramdown
+
+exclude: ['README.md', 'LICENSE', "*.bak"]

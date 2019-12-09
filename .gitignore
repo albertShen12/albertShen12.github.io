@@ -2,6 +2,12 @@
 .idea
 *.iml
 *.iws
+*/_site/
+*/.sass-cache
+*/.jekyll-cache
+*/.jekyll-metadata
+
+
 
 # Mac
 .DS_Store
